@@ -4,14 +4,20 @@
   "description": "nodeweb-api",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:build": "tsc -w --project tsconfig.json && npx -p tsconfig.json",
+    "build:live": "nodemon --watch 'src/' --exec node --loader ts-node/esm src/main.ts --verbose",
+    "start": "npm run build:live"
   },
   "author": "lily.kang",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^5.3.3",
-    "cors": "^2.8.5",
-    "express": "^4.19.2",
-    "rimraf": "^5.0.5"
+    "fastify": "^4.26.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.8",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.8.2",
+    "typescript": "^5.4.5"
   }
 }
