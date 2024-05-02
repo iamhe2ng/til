@@ -9,6 +9,7 @@
   "author": "lily.kang",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "rimraf": "^5.0.5"
