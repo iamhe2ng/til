@@ -5,14 +5,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start:build":"tsc -w --project tsconfig.json && npx -p tsconfig.json",
-    "build:live":"nodemon --watch 'src/' --exec node --loader ts-node/esm src/main.ts --verbose",
-    "start":"npm run build:live" 
+    "start:build": "tsc -w --project tsconfig.json && npx -p tsconfig.json",
+    "build:live": "nodemon --watch 'src/' --exec node --loader ts-node/esm src/main.ts --verbose",
+    "start": "npm run build:live"
   },
   "author": "lily.kang",
   "license": "MIT",
   "dependencies": {
-    "fastify": "^4.26.2"
+    "fastify": "^4.26.2",
+    "fastify-plugin": "^4.5.1"
   },
   "devDependencies": {
     "@types/node": "^20.12.8",
